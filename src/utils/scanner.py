@@ -16,4 +16,9 @@ def quickScan(selectedTarget):
     for port in range(1, 1025):
         scanPort(selectedTarget, port)
     print("\nQuick Scan Completed")
+
+def fullScan(selectedTarget):
+    for port in range(1, 65536):
+        scanPort(selectedTarget, port)
+    print("\nFull Scan Completed")
     

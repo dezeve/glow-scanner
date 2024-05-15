@@ -9,6 +9,10 @@ def main():
 		selectedTarget = utils.input.getTarget()
 		print(f"\nScanning ports 1 to 1024 for target {selectedTarget}\n")
 		utils.scanner.quickScan(selectedTarget)
+	if selectedCommand is 2:
+		selectedTarget = utils.input.getTarget()
+		print(f"\nScanning ports 1 to 65535 for target {selectedTarget}\n")
+		utils.scanner.fullScan(selectedTarget)
 
 if __name__ == "__main__":
 	main()
