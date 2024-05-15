@@ -21,4 +21,9 @@ def fullScan(selectedTarget):
     for port in range(1, 65536):
         scanPort(selectedTarget, port)
     print("\nFull Scan Completed")
-    
+ 
+def customScan(selectedTarget, startPort, endPort):
+	for port in range(startPort, endPort):
+		scanPort(selectedTarget, port)
+	print("\nCustom Scan Completed")
+

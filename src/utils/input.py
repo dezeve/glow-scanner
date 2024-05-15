@@ -24,3 +24,16 @@ def getTarget():
 
 		except:
 			print("\nError: Please Enter a Valid Target\n")
+
+def getPorts():
+	while True:
+		try:
+			startPort = int(input("\nPlease Enter Start Port Number: "))
+			endPort = int(input("Please Enter End Port Number: "))
+			if startPort <= endPort and 0 < startPort < 65534 and 1 < endPort < 65536:
+				return startPort, endPort
+			else:
+				raise Exception
+		except:
+			print("\nError: Please Enter Appropriate Port Numbers\n")
+
