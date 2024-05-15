@@ -18,7 +18,7 @@ def getMenu():
 	print("4 - Exit\n")
 
 def getCommandMenu():
-	print("Command List")
+	print("\nCommand List")
 	print("-------------\n")
 	print("1 - Quick Port Scan")
 	print("2 - Full Port Scan")

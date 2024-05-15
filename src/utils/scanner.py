@@ -7,8 +7,8 @@ def scanPort(selectedTarget, port):
         result = selectedSocket.connect_ex((selectedTarget, port))
         if result == 0:
             print(f"Port {port} is open")
-    except socket.error as err:
-        print(f"Error checking port {port}: {err}")
+    except socket.error as error:
+        print(f"Error: Port {port}: {error}")
     finally:
         selectedSocket.close()
 
@@ -23,7 +23,7 @@ def fullScan(selectedTarget):
     print("\nFull Scan Completed")
  
 def customScan(selectedTarget, startPort, endPort):
-	for port in range(startPort, endPort):
+	for port in range(startPort, endPort + 1):
 		scanPort(selectedTarget, port)
 	print("\nCustom Scan Completed")
 

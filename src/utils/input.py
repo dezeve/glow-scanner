@@ -8,7 +8,7 @@ def getCommand():
 				raise Exception
 			return selectedCommand
 		except:
-			print("\nError: Please Enter a Valid Command\n")
+			print("\nError: Command Not Valid\n")
 
 def getTarget():
 	while True:
@@ -23,17 +23,29 @@ def getTarget():
 				return selectedTarget
 
 		except:
-			print("\nError: Please Enter a Valid Target\n")
+			print("\nError: Target Not Valid\n")
 
 def getPorts():
 	while True:
 		try:
-			startPort = int(input("\nPlease Enter Start Port Number: "))
-			endPort = int(input("Please Enter End Port Number: "))
-			if startPort <= endPort and 0 < startPort < 65534 and 1 < endPort < 65536:
+			startPort = int(input("\nEnter Start Port Number: "))
+			endPort = int(input("Enter End Port Number: "))
+			if startPort <= endPort and 0 < startPort < 65535 and 1 < endPort < 65536:
 				return startPort, endPort
 			else:
 				raise Exception
 		except:
-			print("\nError: Please Enter Appropriate Port Numbers\n")
+			print("\nError: Port Numbers Not Valid\n")
 
+def getExit():
+	while True:
+		try:
+			exitValue = str(input("\nDo You Want to Exit (y/n): "))
+			if exitValue == "y":
+				return True
+			if exitValue == "n":
+				return False
+			else:
+				raise Exception
+		except:
+			print("\nError: Enter y or n\n")
