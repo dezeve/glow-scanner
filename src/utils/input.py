@@ -14,6 +14,8 @@ def getTarget():
 	while True:
 		try:
 			selectedTarget = str(input("Enter Target: "))
+			if selectedTarget.lower() == "localhost":
+				selectedTarget = "127.0.0.1"
 			if any(char.isalpha() for char in selectedTarget):
 				selectedTarget = resolve.resolveHostname(selectedTarget)
 				if not selectedTarget:
