@@ -1,3 +1,13 @@
+
+# A Note About Using This Program
+
+# This program is provided for educational purposes only.
+# It is not guaranteed to be bug-free or function as intended.
+# Use it responsibly and ethically. Always obtain permission
+# from the owner before scanning any system that does
+# not belong to you. Scanning unauthorized systems can be
+# a violation of law or security policy.
+
 import utils.menu
 import utils.input
 import utils.scanner
