@@ -1,11 +1,9 @@
-# If dnslib is not installed
-# run the "pip install dnslib" command to install
-import dnslib
+import socket
 
 def resolveHostname(targetName):
-    resolver = dnslib.Resolver
-    try:
-        result = resolver.req(targetName, qtype="A")
-        return result.rrset[0].rdata
-    except:
-        return None
+	while True:
+		try:
+			targetID = socket.gethostbyname(targetName)
+			return targetID
+		except:
+			return None

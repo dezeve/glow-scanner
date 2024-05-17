@@ -14,8 +14,3 @@ To use glow-scanner, run the main.py file in the glow-scanner/src directory with
 
 - Python
 - Python *socket* module
-- Python *dnslib* library
-
-### **Note**
-
-If the dnslib library is not there, you need to install it with the `pip install dnslib` command for the program to work
