@@ -51,3 +51,16 @@ def getExit():
 				raise Exception
 		except:
 			print("\nError: Enter y or n\n")
+
+def getContent():
+	while True:
+		try:
+			contentValue = str(input("\nShould closed ports also be printed (y/n): "))
+			if contentValue == "y":
+				return "all"
+			if contentValue == "n":
+				return False
+			else:
+				raise Exception
+		except:
+			print("\nError: Enter y or n\n")

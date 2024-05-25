@@ -11,7 +11,7 @@ programName = """
 def getMenu():
 	print(programName)
 	print("Command List")
-	print("-------------\n")
+	print("-------------")
 	print("1 - Quick Port Scan")
 	print("2 - Full Port Scan")
 	print("3 - Custom Port Scan")
@@ -19,7 +19,7 @@ def getMenu():
 
 def getCommandMenu():
 	print("\nCommand List")
-	print("-------------\n")
+	print("-------------")
 	print("1 - Quick Port Scan")
 	print("2 - Full Port Scan")
 	print("3 - Custom Port Scan")

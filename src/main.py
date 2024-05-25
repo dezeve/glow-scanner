@@ -25,25 +25,28 @@ def main():
 		selectedCommand = utils.input.getCommand()
 		if selectedCommand == 1:
 			selectedTarget = utils.input.getTarget()
+			content = utils.input.getContent()
 			print(f"\nScanning ports 1 to 1024 for target {selectedTarget}\n")
-			utils.scanner.quickScan(selectedTarget)
+			utils.scanner.quickScan(selectedTarget, content)
 			exitValue = utils.input.getExit()
 			if exitValue:
 				doExit = True
 		if selectedCommand == 2:
 			selectedTarget = utils.input.getTarget()
+			content = utils.input.getContent()
 			print(f"\nScanning ports 1 to 65535 for target {selectedTarget}\n")
-			utils.scanner.fullScan(selectedTarget)
+			utils.scanner.fullScan(selectedTarget, content)
 			exitValue = utils.input.getExit()
 			if exitValue:
 				doExit = True
 		if selectedCommand == 3:
 			selectedTarget = utils.input.getTarget()
 			selectedPorts = utils.input.getPorts()
+			content = utils.input.getContent()
 			startPort = selectedPorts[0]
 			endPort = selectedPorts[1]
 			print(f"\nScanning ports {startPort} to {endPort} for target {selectedTarget}\n")
-			utils.scanner.customScan(selectedTarget, startPort, endPort)
+			utils.scanner.customScan(selectedTarget, startPort, endPort, content)
 			exitValue = utils.input.getExit()
 			if exitValue:
 				doExit = True
